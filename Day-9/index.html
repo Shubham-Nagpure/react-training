@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0.9 | JS and the Dom</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+  </head>
+  <body>
+    <div id="q1" class="tab flex container question1-answer">
+      <iframe
+        id="iframe1"
+        class="youtube-container-content"
+        src="https://joshsoftware.com/"
+      >
+      </iframe>
+
+      <div id="page-update-button">
+        <button type="submit" class="html-update-button">
+          How's the Josh ?
+        </button>
+      </div>
+    </div>
+    <hr />
+    <div id="q2" class="tab flex container question2-answer">
+      <iframe
+        id="iframe"
+        class="youtube-container-content"
+        src="https://www.youtube.com/embed/8pDqJVdNa44"
+      ></iframe>
+      <div id="playback-rate">
+        <button type="submit" class="playback-speed" value="0.25">0.25</button>
+        <button type="submit" class="playback-speed" value="0.5">0.5</button>
+        <button type="submit" class="playback-speed" value="1">1</button>
+        <button type="submit" class="playback-speed" value="2">2</button>
+        <button type="submit" class="playback-speed" value="5">5</button>
+        <button type="submit" class="playback-speed" value="10">10</button>
+      </div>
+    </div>
+    <hr />
+    <div id="q3" class="tab container question question3-answer">
+      <div class="container-blog flex">
+        <form id="blog-form">
+          <div class="form-header">Submit your blog</div>
+          <div class="blog-form-content">
+            <div>
+              <label class="label">Title:</label>
+              <input
+                type="text"
+                name="title"
+                placeholder="Enter title"
+                class="input"
+              />
+            </div>
+            <div>
+              <label class="label">Details:</label>
+              <textarea
+                type="text"
+                name="details"
+                placeholder="Enter details"
+                rows="10"
+                class="input"
+              >
+              </textarea>
+            </div>
+            <div>
+              <label class="label">Auther:</label>
+              <input
+                type="text"
+                name="auther"
+                placeholder="Enter auther"
+                class="input"
+              />
+            </div>
+            <button type="submit" name="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr />
+
+    <div id="q4" class="tab flex container question question4-answer">
+      <div class="no-data">Please click on button to load the data</div>
+      <div class="fliter-control">
+        <div class="flex">
+          <div class="search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="input"
+              placeholder="Search by Username"
+              oninput="filterUsers(event)"
+            />
+          </div>
+          <button
+            type="submit"
+            onclick="sortUsersAsc()"
+            class="button ml-10"
+            value="1"
+          >
+            Sort by Name(asc)
+          </button>
+          <button
+            type="submit"
+            onclick="sortUsersDesc()"
+            class="button ml-10"
+            value="1"
+          >
+            Sort by Name(desc)
+          </button>
+        </div>
+      </div>
+      <div class="loader"></div>
+      <table class="table">
+        <thead class="table-header">
+          <tr class="table-row">
+            <th class="header-item">
+              <button type="button" class="id" onclick="filterUser(event,'id')">
+                ID
+                <div class="filter-arrow"></div>
+              </button>
+            </th>
+            <th class="header-item">
+              <button
+                type="button"
+                class="name"
+                onclick="filterUser(event,'name')"
+              >
+                Name
+                <div class="filter-arrow"></div>
+              </button>
+            </th>
+            <th class="header-item">
+              <button
+                type="button"
+                class="username"
+                onclick="filterUser(event,'username')"
+              >
+                Username
+                <div class="filter-arrow"></div>
+              </button>
+            </th>
+            <th class="header-item">
+              <button
+                type="button"
+                class="email"
+                onclick="filterUser(event,'email')"
+              >
+                Email
+                <div class="filter-arrow"></div>
+              </button>
+            </th>
+            <th class="header-item">
+              <button
+                type="button"
+                class="phone"
+                onclick="filterUser(event,'phone')"
+              >
+                Phone
+                <div class="filter-arrow"></div>
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="table-body"></tbody>
+      </table>
+      <div class="load-data">
+        <div id="page-update-button">
+          <button
+            type="submit"
+            onclick="loadTableData()"
+            class="html-update-button"
+            value="1"
+          >
+            Load Table Data
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-navigation">
+      <a href="#q1" class="question-button"> Question 1 </a>
+      <a href="#q2" class="question-button"> Question 2 </a>
+      <a href="#q3" class="question-button"> Question 3 </a>
+      <a href="#q4" class="question-button"> Question 4 </a>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
