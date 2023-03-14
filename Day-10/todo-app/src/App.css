@@ -1,0 +1,77 @@
+.todo-app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  background-color: beige;
+  padding: 40px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+}
+.main-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+button {
+  background-color: rgb(115, 0, 115);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+  height: 60px;
+}
+
+input {
+  width: 500px;
+  padding: 10px;
+  border-color: rgb(115, 0, 115);
+  margin-left: 5px;
+}
+
+.pending,
+.completed {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 575px;
+  margin-top: 20px;
+}
+
+.pending-header-title,
+.completed-header-title {
+  width: 100%;
+  padding: 12px 20px;
+}
+
+.pending-header-title {
+  background-color: rgba(203, 4, 4, 0.834);
+}
+
+.completed-header-title {
+  background-color: rgba(73, 255, 37, 0.834);
+}
+
+.text-center {
+  text-align: center;
+  justify-content: center;
+}
+
+hr {
+  color: dimgray;
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+}
